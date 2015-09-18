@@ -4,7 +4,7 @@ var stream = require('stream');
 var assert = require('chai').assert;
 var CloudStore = require('./index.js');
 
-describe.skip('CloudStore', function(){
+describe('CloudStore', function(){
 	var file = new CloudStore({
 		pkgcloud: {
 			provider: 'rackspace'
@@ -16,7 +16,7 @@ describe.skip('CloudStore', function(){
 
 		it('returns a readable stream', function(){
 			var s = file.fetch('echo', 'ad8cee67138e73009d4e22831ec6eb3b7f9e60da', timestamp);
-			assert.instanceOf(s, stream.Readable);
+			assert.isFunction(s._read);
 		});
 	});
 
@@ -25,7 +25,7 @@ describe.skip('CloudStore', function(){
 
 		it('returns a writable stream', function(){
 			var s = file.save('echo', 'ad8cee67138e73009d4e22831ec6eb3b7f9e60da', timestamp);
-			assert.instanceOf(s, stream.Writable);
+			assert.isFunction(s._write);
 		});
 	});
 
