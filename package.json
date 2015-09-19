@@ -2,7 +2,7 @@
   "name": "stillframe-store-cloud",
   "version": "1.0.0",
   "description": "A simple distributed url-to-whatever framework.",
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "mocha"
   },

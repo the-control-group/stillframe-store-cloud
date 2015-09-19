@@ -38,7 +38,7 @@ CloudStore.prototype.save = function save(hash, timestamp, metadata, ttl) {
 		container: this.config.container,
 		remote: [hash, timestamp].join(':'),
 		headers: {
-			'X-Delete-At': (timestamp + ttl) / 1000 + 60
+			// 'X-Delete-At': (timestamp + ttl) / 1000 + 60
 		}
 	};
 
