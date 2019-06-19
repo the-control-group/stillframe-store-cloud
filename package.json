@@ -1,6 +1,6 @@
 {
   "name": "stillframe-store-cloud",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple distributed url-to-whatever framework.",
   "main": "./index.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "mocha": "^2.2.4"
   },
   "dependencies": {
-    "pkgcloud": "^2.0.0"
+    "pkgcloud": "^1.1.0"
   }
 }
